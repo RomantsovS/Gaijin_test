@@ -14,7 +14,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char *argv[]) {
     std::vector<std::string> queries;
     for (int i = 0; i < 10000; ++i) {
         std::ostringstream oss;
-        if (rand() % 10 == 0) {
+        if (rand() % 100 == 0) {
             oss << "$set " << keys[rand() % keys.size()] << "=value" << rand() % 1000 << '\n';
         } else {
             oss << "$get " << keys[rand() % keys.size()] << '\n';
